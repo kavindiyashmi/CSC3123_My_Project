@@ -21,7 +21,7 @@
 	   header("Location:index.php");}
 	  }
   }
-  }
+  
   ?>
   
 <!DOCTYPE html>
