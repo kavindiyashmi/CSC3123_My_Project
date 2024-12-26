@@ -25,7 +25,7 @@
     <title>Document</title>
 </head>
 <body>
-<form class="contact-form" action="contact_us.php" method="POST">
+<form class="contact-form" action="contact_forma.php" method="POST">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
     <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
