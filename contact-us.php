@@ -190,9 +190,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="custom-design.html">Custom T-Shirts</a></li>
-                <li><a href="contact-us.html">Contact</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="custom-design.php">Custom T-Shirts</a></li>
+                <li><a href="#dresses-collection">Dresses Collection</a></li>
+                <li><a href="contact-us.php">Contact</a></li>
             </ul>
         </nav>
     </header>
