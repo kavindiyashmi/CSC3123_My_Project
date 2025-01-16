@@ -26,7 +26,7 @@
         header {
             background: url('your-header-background-image.jpg') no-repeat center center/cover; /* Background image for header */
             color: rgb(95, 6, 6);
-            padding: 80px 0; /* Adjust padding to make space for text */
+            padding: 10px; /* Adjust padding to make space for text */
             text-align: center;
             position: relative;
         }
@@ -238,10 +238,10 @@
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="custom-design.html">Custom T-Shirts</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="custom-design.php">Custom T-Shirts</a></li>
                 <li><a href="#dresses-collection">Dresses Collection</a></li> <!-- Link to Dresses Collection -->
-                <li><a href="contact-us.html">Contact</a></li>
+                <li><a href="contact-us.php">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -251,7 +251,7 @@
         <section class="hero">
             <h1>Zero Y Clothing</h1>
             <p>Discover personalized clothing & custom t-shirt designs that express your unique style.</p>
-            <a href="custom-design.html" class="cta-button">Create Your Design</a>
+            <a href="custom-design.php" class="cta-button">Create Your Design</a>
         </section>
 
         <!-- Dresses Collection Section -->
