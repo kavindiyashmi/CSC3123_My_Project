@@ -24,14 +24,13 @@
 
         /* Header Styling */
         header {
-            background: url('your-header-background-image.jpg') no-repeat center center/cover; /* Background image for header */
+            background: url('your-header-background-image.jpg') no-repeat center center/cover;
             color: rgb(95, 6, 6);
-            padding: 10px; /* Adjust padding to make space for text */
+            padding: 10px;
             text-align: center;
             position: relative;
         }
 
-        /* Overlay Effect for Header Text */
         header::after {
             content: '';
             position: absolute;
@@ -39,7 +38,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            background: rgba(0, 0, 0, 0.5);
             z-index: -1;
         }
 
@@ -66,7 +65,7 @@
 
         header nav ul li a:hover {
             color: #ffcc00;
-            background-color: rgba(0, 0, 0, 0.3); /* Add background on hover */
+            background-color: rgba(0, 0, 0, 0.3);
             border-radius: 5px;
         }
 
@@ -74,16 +73,15 @@
         .hero {
             text-align: center;
             padding: 120px 20px;
-            background-image: url('images/hero-background.jpg'); /* Background image for hero section */
+            background-image: url('images/banner.jpg');
             background-size: cover;
             background-position: center;
             color: white;
             text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
         }
 
-        /* Header Title Styling */
         .hero h1 {
-            font-family: 'Montserrat', sans-serif; /* Change to custom font */
+            font-family: 'Montserrat', sans-serif;
             font-size: 5em;
             margin-bottom: 20px;
             color: #ffcc00;
@@ -96,7 +94,7 @@
 
         .cta-button {
             padding: 15px 30px;
-            background-color: #ffcc00; /* Button color */
+            background-color: #ffcc00;
             color: #333;
             text-decoration: none;
             border-radius: 8px;
@@ -106,7 +104,7 @@
         }
 
         .cta-button:hover {
-            background-color: #ff6a00; /* Hover effect */
+            background-color: #ff6a00;
         }
 
         /* Dresses Collection Section */
@@ -138,7 +136,7 @@
 
         /* Additional Images Section for Custom T-Shirts */
         .more-images {
-            text-align: center; /* Center the text */
+            text-align: center;
             padding: 50px 20px;
             background-color: #ffffff;
         }
@@ -151,17 +149,62 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
+        /* About Us Section */
+        .about {
+            padding: 80px 20px;
+            background-color: #d8b863;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-image: url('your-about-image.jpg'); /* Add an image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .about h2 {
+            font-size: 2.5em;
+            color: #401f0c;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.2em;
+            color: #000000;
+            margin-bottom: 20px;
+            max-width: 800px;
+        }
+
+        .about-image {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
         /* Footer Styling */
         footer {
             background-color: #333;
             color: white;
-            padding: 20px 0;
+            padding: 30px 20px;
             text-align: center;
-            font-size: 1.1em;
+            font-size: 1.2em;
         }
 
         footer p {
             margin-top: 10px;
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: #ff6a00;
         }
 
         /* Media Queries for responsiveness */
@@ -198,37 +241,6 @@
             .more-images img {
                 max-width: 100%;
             }
-            /* About Us Section */
-.about {
-    padding: 100px 20px;
-    background-color: #ffb3b3;
-    text-align: center; /* Center text */
-    display: flex;
-    flex-direction: column; /* Arrange text and image in column */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-}
-
-.about h2 {
-    font-size: 2.5em;
-    color: #ff6a00;
-    margin-bottom: 20px;
-}
-
-.about p {
-    font-size: 1.2em;
-    color: #6b0404;
-    margin-bottom: 20px;
-    max-width: 800px; /* Limit text width for better readability */
-}
-
-.about-image {
-    width: 100%;
-    max-width: 500px; /* Set a maximum width for the image */
-    margin-top: 20px;
-    border-radius: 8px;
-}
-
         }
     </style>
 </head>
@@ -240,7 +252,7 @@
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="custom-design.php">Custom T-Shirts</a></li>
-                <li><a href="#dresses-collection">Dresses Collection</a></li> <!-- Link to Dresses Collection -->
+                <li><a href="#dresses-collection">Dresses Collection</a></li>
                 <li><a href="contact-us.php">Contact</a></li>
             </ul>
         </nav>
@@ -259,11 +271,8 @@
             <h2>Our Dress Collection</h2>
             <p>Explore our elegant collection of dresses designed to make you stand out in any occasion.</p>
             <div>
-                <!-- External Dress Image 1 -->
                 <img src="https://i.pinimg.com/736x/9a/41/00/9a41004aed507ff48d94daa86afbe622.jpg" alt="Maxi Dress">
-                <!-- External Dress Image 2 -->
                 <img src="https://i.pinimg.com/736x/9a/87/c9/9a87c9875711721e70a41ddacf401c49.jpg" alt="Elegant Dress 2">
-                <!-- External Dress Image 3 -->
                 <img src="https://img.ltwebstatic.com/images3_pi/2023/06/09/1686278192ab01bf054218d0c659fe888711627941_thumbnail_720x.jpg" alt="Elegant Dress 3">
             </div>
         </section>
@@ -272,34 +281,26 @@
         <section class="more-images">
             <h2>Creative Custom T-Shirt Designs</h2>
             <div>
-                <!-- Example of another image in the collection -->
                 <img src="https://i5.walmartimages.com/seo/Fashion-Summer-Womens-T-shirt-Sparkle-Butterfly-Printed-Short-Sleeve-Tees-Funny-Graphic-Shirts-Casual-Pullover-Tops_b21d1503-90ce-4169-ac23-9a763177366e.0ae09583eac9f4b7f842ec59b11964a4.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF" alt="Custom T-Shirt 1">
-                <!-- Example of another image in the collection -->
-                <img src="https://www.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=https%3A%2F%2Fyp-media.s3.amazonaws.com%2FDesigns_Inners_and_Outers%2FTshirts%2FWomen%2Ftshirt_hs_oversized_women_pat_d90_o.jpg&resizeTo=450" alt="Custom T-Shirt 2 ">
-
+                <img src="https://www.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=https%3A%2F%2Fyp-media.s3.amazonaws.com%2FDesigns_Inners_and_Outers%2FTshirts%2FWomen%2Ftshirt_hs_oversized_women_pat_d90_o.jpg&resizeTo=450" alt="Custom T-Shirt 2">
             </div>
         </section>
     </main>
 
-     
-     <!-- About Us Section -->
-<section class="about">
-    <h2>About Us</h2>
-    <p>At Zero Y Clothing, we offer a range of personalized dresses and custom t-shirts, helping you express your individuality through fashion. Join us to create one-of-a-kind pieces tailored to your style.</p>
-    <!-- Base64 Image -->
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfXkkUYT5yxgLe9hcwg0yCYjC0uunzKNPr9w&s" class="about-image">
-</section>
-
+    <!-- About Us Section -->
+    <section class="about">
+        <h2>About Us</h2>
+        <p>At Zero Y Clothing, we offer a range of personalized dresses and custom t-shirts, helping you express your individuality through fashion. Join us to create one-of-a-kind pieces tailored to your style.</p>
+    </section>
 
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Zero Y Clothing | All Rights Reserved</p>
+        <!-- Optional Links in Footer -->
+        <a href="#">Privacy Policy</a> | 
+        <a href="#">Terms of Service</a>
     </footer>
 
     <script src="script.js"></script>
-
 </body>
 </html>
-
-
-
