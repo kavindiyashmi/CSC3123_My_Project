@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zero Y Clothing</title> 
 
-    <!-- Link to Google Fonts (for a custom font) -->
+   
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <!-- Link to external CSS file -->
+  
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Header Section -->
     <header>
         <nav>
             <ul>
@@ -25,7 +24,7 @@
     </header>
 
     <main>
-        <!-- Hero Section with background image -->
+      
         <section class="hero">
             <h1>Zero Y Clothing</h1>
             <p>Discover personalized clothing & custom t-shirt designs that express your unique style.</p>
@@ -43,7 +42,6 @@
             </div>
         </section>
 
-        <!-- Additional Images Section for Custom T-Shirts -->
         <section class="more-images">
             <h2>Creative Custom T-Shirt Designs</h2>
             <div>
@@ -53,17 +51,16 @@
         </section>
     </main>
 
-    <!-- About Us Section -->
+
     <section class="about">
         <h2>About Us</h2>
         <p>At Zero Y Clothing, we offer a range of personalized dresses and custom t-shirts, helping you express your individuality through fashion. Join us to create one-of-a-kind pieces tailored to your style.</p>
     </section>
 
-    <!-- Footer Section -->
+   
     <footer>
-        <p>&copy; 2024 Zero Y Clothing | All Rights Reserved</p>
-        <!-- Optional Links in Footer -->
-        <a href="#">Privacy Policy</a> | 
+        <
+        <a href="#">Privacy Policy</a> 
         <a href="#">Terms of Service</a>
     </footer>
 
