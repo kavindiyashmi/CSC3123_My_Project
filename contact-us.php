@@ -1,48 +1,46 @@
 <?php
-// Database connection settings
-$host = '127.0.0.1';  // Database host (usually localhost)
-$db = 'Zero_Clothing'; // Database name
-$user = 'root';        // Database username
-$pass = 'mariadb';            // Database password
+
+$host = '127.0.0.1'; 
+$db = 'Zero_Clothing'; 
+$user = 'root';      
+$pass = 'mariadb';          
 
 try {
-    // Create a PDO connection to the database
+  
     $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);  // Enable exception handling for errors
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
 } catch (PDOException $e) {
     die("Could not connect to the database $db: " . $e->getMessage());
 }
 
-// Check if the form was submitted
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Get form data
+    
     $name = $_POST['name'];
     $email = $_POST['email'];
     $message = $_POST['message'];
 
-    // Validate the form data (you can add more validation if needed)
     if (!empty($name) && !empty($email) && !empty($message)) {
         try {
-            // Prepare SQL query to insert form data into the contact_messages table
+            
             $query = "INSERT INTO contact_messages (name, email, message) VALUES (:name, :email, :message)";
             $stmt = $pdo->prepare($query);
 
-            // Bind the form data to the SQL statement
+            
             $stmt->bindParam(':name', $name);
             $stmt->bindParam(':email', $email);
             $stmt->bindParam(':message', $message);
 
-            // Execute the query
+            
             $stmt->execute();
 
-            // Success message
+            
             echo "Thank you for contacting us! We will get back to you soon.";
         } catch (PDOException $e) {
-            // Error handling
+            
             echo "Error: " . $e->getMessage();
         }
-    } else {
-        // Error if form data is missing
+    }
         echo "All fields are required.";
     }
 }
