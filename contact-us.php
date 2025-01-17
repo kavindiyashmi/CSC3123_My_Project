@@ -2,13 +2,13 @@
 
 $host = '127.0.0.1'; 
 $db = 'Zero_Clothing'; 
-$user = 'root';      
-$pass = 'mariadb';          
+$user = 'root';        
+$pass = 'mariadb';            
 
 try {
-  
+    
     $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     die("Could not connect to the database $db: " . $e->getMessage());
 }
@@ -20,27 +20,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $message = $_POST['message'];
 
+  
     if (!empty($name) && !empty($email) && !empty($message)) {
         try {
             
             $query = "INSERT INTO contact_messages (name, email, message) VALUES (:name, :email, :message)";
             $stmt = $pdo->prepare($query);
 
-            
             $stmt->bindParam(':name', $name);
             $stmt->bindParam(':email', $email);
             $stmt->bindParam(':message', $message);
 
-            
             $stmt->execute();
 
             
-            echo "Thank you for contacting us! We will get back to you soon.";
+            echo "Thank you for contacting us!";
         } catch (PDOException $e) {
             
             echo "Error: " . $e->getMessage();
         }
-    }
+    } else {
+       
         echo "All fields are required.";
     }
 }
@@ -55,10 +55,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Zero Y Clothing</title>
-    <!-- Link to Google Fonts (for a custom font) -->
+   
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <style>
-        /* Reset and box-sizing */
+      
         * {
             margin: 0;
             padding: 0;
@@ -72,16 +72,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             line-height: 1.6;
         }
 
-        /* Header Styling */
+        /
         header {
-            background: url('your-header-background-image.jpg') no-repeat center center/cover; /* Background image for header */
+            background: url('your-header-background-image.jpg') no-repeat center center/cover;
             color: white;
-            padding: 80px 0; /* Adjust padding to make space for text */
+            padding: 80px 0; 
             text-align: center;
             position: relative;
         }
 
-        /* Overlay Effect for Header Text */
+
         header::after {
             content: '';
             position: absolute;
@@ -89,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            background: rgba(0, 0, 0, 0.5);
             z-index: -1;
         }
 
@@ -115,7 +115,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             color: #ffcc00;
         }
 
-        /* Contact Section Styling */
         .contact-section {
             padding: 50px 20px;
             background-color: #fff;
@@ -162,7 +161,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             background-color: #ff6a00;
         }
 
-        /* Footer Styling */
+     
         footer {
             background-color: #333;
             color: white;
@@ -175,7 +174,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             margin-top: 10px;
         }
 
-        /* Section Styling for General Consistency */
+     
         section {
             padding: 50px 20px;
         }
@@ -184,7 +183,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
 
-    <!-- Header Section -->
+ 
     <header>
         <nav>
             <ul>
@@ -197,12 +196,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </header>
 
     <main>
-        <!-- Contact Section -->
+       
         <section class="contact-section">
             <h2>Contact Us</h2>
             <p>If you have any questions or need assistance, feel free to reach out to us. We're here to help!</p>
 
-            <!-- Contact Form -->
+          
             <form class="contact-form" action="contact-us.php" method="POST">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
@@ -213,7 +212,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </section>
     </main>
 
-    <!-- Footer Section -->
+    
     <footer>
         <p>&copy; 2024 Zero Y Clothing | All Rights Reserved</p>
     </footer>
