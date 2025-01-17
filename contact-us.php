@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             line-height: 1.6;
         }
 
-        /
+    
         header {
             background: url('your-header-background-image.jpg') no-repeat center center/cover;
             color: white;
