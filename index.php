@@ -31,7 +31,7 @@
             <a href="custom-design.php" class="cta-button">Create Your Design</a>
         </section>
 
-        <!-- Dresses Collection Section -->
+       
         <section id="dresses-collection" class="more-images">
             <h2>Our Dress Collection</h2>
             <p>Explore our elegant collection of dresses designed to make you stand out in any occasion.</p>
